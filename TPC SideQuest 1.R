@@ -1,4 +1,4 @@
-#https://opportunityinsights.org/course/ 
+t#https://opportunityinsights.org/course/ 
 #Assignment 1 
 #clear the workspace
 rm(list=ls())
@@ -39,6 +39,6 @@ p_pooled_var <- current_tract$kfr_pooled_p25
 
 
 
-fileName <- cat(query_state,"log.txt")
+fileName <- cat(query_state,query_county,query_tract,"log.txt")
 sink(file=fileName, split=TRUE)
 sink()
