@@ -33,8 +33,7 @@ query_county <- 079
 query_tract <- 20100
 current_state <- subset(atlas,state == query_state)
 current_county <- subset(atlas,state == query_state & county == query_county)
-#removed state and county validation, tract is 'choose your own adventure' 
-current_tract <- subset(atlas,tract == query_tract)
+current_tract <- subset(atlas,state == query_state & county == query_county & tract == query_tract)
 
 p_pooled_var <- current_tract$kfr_pooled_p25
 
