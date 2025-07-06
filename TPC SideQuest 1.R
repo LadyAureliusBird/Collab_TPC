@@ -22,6 +22,7 @@ atlas <- read_dta("atlas.dta")
 #Report weighted summary statistics
 #there is a problem with mean count, I copied this from the PDF 
 #this is the current error "'x' and 'w' must have the same length" 
+#prev code used SDM Tools, new code uses the in-built method from R, need to check the paramaters in the new in-built method 
 meanCount = weighted.mean(atlas$yvar, atlas$count_pooled)
 meanSD = sqrt(wtd.var(atlas$yvar,atlas$count_pooled))
 
